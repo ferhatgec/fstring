@@ -117,3 +117,16 @@ bool operator==(const FString& _str_1, const FString& _str_2) {
 
         return (n == _len_1 && n == _len_2);
 }
+
+bool operator==(const FString& _str_1, char _ch) {
+        if(_str_1.len() > 1)
+                return false;
+
+        if(_str_1[0] == _ch)
+                return true;
+        else
+                return false;
+        
+
+        return false;
+}

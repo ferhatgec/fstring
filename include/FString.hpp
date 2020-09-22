@@ -42,7 +42,9 @@ public:
         unsigned len() const; 
 
         friend bool operator== (const FString& _str_1, 
-                const FString& _str_2);  
+                const FString& _str_2);
+        
+        friend bool operator== (const FString& _str_1, char _ch); 
 }; 
 
 
