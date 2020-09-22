@@ -68,3 +68,18 @@ char& FString::operator[] (unsigned _ch) {
 
         return data[_ch];
 }
+
+FString& FString::append(const FString& _str) {
+        unsigned len = length + _str.len();
+        char*    str = new char[len];
+
+        for (unsigned f = 0; f < length; f++)
+                str[f] = data[f];
+
+        for (unsigned i = 0; i < _str.len(); i++)
+                str[length+i] = _str[i];
+
+        length = len;
+        data   = str;
+        return *this;    
+}

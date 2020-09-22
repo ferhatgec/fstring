@@ -10,6 +10,14 @@
 
 int main(void) {
         FString a('a');
-        std::cout << a.len() << " " << a;
+        FString b('b');
+        std::cout << "A: " << a << "\n" <<
+        "B: " << b << "\n";
+
+        /* a = ab */
+        a.append(b);
+        
+        std::cout << "New A: " << a << "\n";
+
         return 0;
 }

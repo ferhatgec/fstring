@@ -36,6 +36,8 @@ public:
         char operator[] (unsigned _ch) const;
         char& operator[] (unsigned _ch);
 
+        FString& append(const FString& _str); 
+        
         unsigned len() const; 
 }; 
 
