@@ -178,7 +178,7 @@ int FString::compare(FString& _str) {
 
   	        return (*unsigned_str_1 > *unsigned_str_2) - (*unsigned_str_1 < *unsigned_str_2);
         } else if(length == 1) {
-                if(_str[0] == data[0])
+                if(_str[0] == data[0 && _str.len() == 1])
                         return 0;
                 else
                         return -1;
