@@ -163,3 +163,26 @@ int FString::conv_int() {
 
         return 0;
 }
+
+int FString::compare(FString& _str) {
+        if(length > 1) {
+                const unsigned char *unsigned_str_1 = (const unsigned char *) data;
+	        const unsigned char *unsigned_str_2 = (const unsigned char *) &_str[0]; /* not const */
+
+	        while (*unsigned_str_1 == *unsigned_str_2 && 
+		        *unsigned_str_1 != '\0') {
+    		
+		        unsigned_str_1++;
+    	        	unsigned_str_2++;
+          	}
+
+  	        return (*unsigned_str_1 > *unsigned_str_2) - (*unsigned_str_1 < *unsigned_str_2);
+        } else if(length == 1) {
+                if(_str[0] == data[0])
+                        return 0;
+                else
+                        return -1;
+        }
+
+        return -1;
+}
