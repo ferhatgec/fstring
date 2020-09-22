@@ -40,6 +40,9 @@ public:
         FString& equal(const FString& _str);
 
         unsigned len() const; 
+
+        friend bool operator== (const FString& _str_1, 
+                const FString& _str_2);  
 }; 
 
 

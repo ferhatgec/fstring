@@ -45,7 +45,7 @@ unsigned FString::len() const {
 }
 
 /* e.g cout (ostream) */
-std::ostream& operator<< (std::ostream& ostr, const FString& _str) {
+std::ostream& operator<<(std::ostream& ostr, const FString& _str) {
         if (_str.len() > 0) {
                 for (unsigned j = 0; j < _str.len(); j++)
                         ostr << _str[j];
@@ -55,14 +55,14 @@ std::ostream& operator<< (std::ostream& ostr, const FString& _str) {
         return ostr;
 }
 
-char FString::operator[] (unsigned _ch) const {
+char FString::operator[](unsigned _ch) const {
         if(_ch >= length) 
                 throw 1;
         
         return data[_ch];
 }
 
-char& FString::operator[] (unsigned _ch) {
+char& FString::operator[](unsigned _ch) {
         if(_ch >= length)
                 throw 1;
 
@@ -96,10 +96,24 @@ FString& FString::equal(const FString& _str) {
                 for (unsigned i = 0; i < _str.len(); i++)
                         str[length+i] = _str[i];
         }
-        
+
         delete data;
         
         length = len;
         data   = str;
         return *this;    
+}
+
+bool operator==(const FString& _str_1, const FString& _str_2) {
+        unsigned _len_1 = _str_1.len();
+        unsigned _len_2 = _str_2.len();
+        unsigned n = 0;
+
+        if(_len_1 == _len_2)
+                while(n < _len_1 && _str_1[n] == _str_2[n]) n++;
+        else
+                return false;
+        
+
+        return (n == _len_1 && n == _len_2);
 }
