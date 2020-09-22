@@ -56,14 +56,14 @@ std::ostream& operator<< (std::ostream& ostr, const FString& _str) {
 }
 
 char FString::operator[] (unsigned _ch) const {
-        if(_ch > length) 
+        if(_ch >= length) 
                 throw 1;
         
         return data[_ch];
 }
 
 char& FString::operator[] (unsigned _ch) {
-        if(_ch > length)
+        if(_ch >= length)
                 throw 1;
 
         return data[_ch];
