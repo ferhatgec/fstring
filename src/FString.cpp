@@ -79,6 +79,8 @@ FString& FString::append(const FString& _str) {
         for (unsigned i = 0; i < _str.len(); i++)
                 str[length+i] = _str[i];
 
+        delete data;
+        
         length = len;
         data   = str;
         return *this;    
