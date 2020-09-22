@@ -134,3 +134,10 @@ bool operator== (const FString& _str_1, char _ch) {
 bool operator!= (const FString& _str_1, const FString& _str_2) {
         return !((_str_1 ==  _str_2) == true);
 }
+
+bool operator!= (const FString& _str, char _ch) {
+        if(_str.len() > 1)
+                return true;
+        
+        return !((_str == _ch) == true);
+}
