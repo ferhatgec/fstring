@@ -37,7 +37,8 @@ public:
         char& operator[] (unsigned _ch);
 
         FString& append(const FString& _str); 
-        
+        FString& equal(const FString& _str);
+
         unsigned len() const; 
 }; 
 

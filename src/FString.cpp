@@ -9,7 +9,7 @@
 
 FString::FString() {
         length = 0;
-        data = new char[0];
+        data   = new char[0];
 }
 
 FString::~FString() {
@@ -71,7 +71,7 @@ char& FString::operator[] (unsigned _ch) {
 
 FString& FString::append(const FString& _str) {
         unsigned len = length + _str.len();
-        char*    str = new char[len];
+        char* str    = new char[len];
 
         for (unsigned f = 0; f < length; f++)
                 str[f] = data[f];
@@ -79,6 +79,24 @@ FString& FString::append(const FString& _str) {
         for (unsigned i = 0; i < _str.len(); i++)
                 str[length+i] = _str[i];
 
+        delete data;
+        
+        length = len;
+        data   = str;
+        return *this;    
+}
+
+FString& FString::equal(const FString& _str) {
+        unsigned len = _str.len();
+        char* str    = new char[len];
+
+        if(len == 1)
+                str[0] = _str[0];
+        else {                
+                for (unsigned i = 0; i < _str.len(); i++)
+                        str[length+i] = _str[i];
+        }
+        
         delete data;
         
         length = len;
