@@ -48,6 +48,8 @@ public:
 
         friend bool operator!= (const FString& _str_1, const FString& _str_2);
         friend bool operator!= (const FString& _str, char _ch);
+
+        int conv_int();
 }; 
 
 
