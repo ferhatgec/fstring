@@ -31,7 +31,7 @@ FString::FString(const char* ch) {
                 for(; ch[n] != '\0';) n++;
                 length = n;
                 data = new char[n];
-                for(unsigned f = 0; f < n; n++)
+                for(unsigned f = 0; f < n; f++)
                         data[f] = ch[f];
         } else {
                 /* Blank fstring. */
@@ -39,6 +39,7 @@ FString::FString(const char* ch) {
                 data = new char[0];
         }
 }
+
 
 unsigned FString::len() const {
         return length;
