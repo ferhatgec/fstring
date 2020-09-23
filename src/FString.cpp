@@ -105,7 +105,7 @@ FString& FString::equal(const FString& _str) {
                 str[0] = _str[0];
         else {                
                 for (unsigned i = 0; i < _str.len(); i++)
-                        str[length+i] = _str[i];
+                        str[i] = _str[i];
         }
 
         delete data;
