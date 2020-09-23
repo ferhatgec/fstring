@@ -37,6 +37,10 @@ public:
         char& operator[] (unsigned _ch);
 
         FString& append(const FString& _str); 
+        
+        FString& append(const FString& _str_1,
+                const FString& _str_2);
+
         FString& equal(const FString& _str);
 
         unsigned len() const; 
