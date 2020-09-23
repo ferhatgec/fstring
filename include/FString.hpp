@@ -42,7 +42,8 @@ public:
                 const FString& _str_2);
 
         FString& equal(const FString& _str);
-
+        FString& equal(const char* _ch);
+        
         unsigned len() const; 
 
         friend bool operator== (const FString& _str_1, 

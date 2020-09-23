@@ -115,6 +115,42 @@ FString& FString::equal(const FString& _str) {
         return *this;    
 }
 
+FString& FString::equal(const char* _ch) {
+        unsigned f = 0;
+
+        /* Get const char* length */
+        do {
+                f++;
+        } while(_ch[f] != '\0');
+        
+        /* Create new char* with const char* length */
+        char* _clone_str = new char[f];
+        
+        f = 0;
+
+        do {
+                /* Copying */
+                _clone_str[f] = _ch[f];
+                f++;
+        } while(_ch[f] != '\0');
+        
+        char* str    = new char[f];
+
+        if(f == 1)
+                str[0] = _ch[0]; /* Char */
+        else {
+                for (unsigned i = 0; i < f; i++)
+                        str[i] = _ch[i];
+        }
+
+        /* Delete old data */
+        delete data;
+        
+        length = f;
+        data   = str;
+        return *this;    
+}
+
 bool operator== (const FString& _str_1, const FString& _str_2) {
         unsigned _len_1 = _str_1.len();
         unsigned _len_2 = _str_2.len();
