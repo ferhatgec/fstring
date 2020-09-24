@@ -2,9 +2,10 @@
 ## STL String implementation with powerful features.
 
 ```cpp
-FString a('o');
-FString b('k');
-a.append(b);
+FString _str("Hello, ");
+FString __str("World!\n");
+_str.append(__str);
+Print(_str);
 ```
 
 
