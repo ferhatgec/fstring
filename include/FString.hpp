@@ -61,6 +61,8 @@ public:
         friend bool operator!= (const FString& _str_1, const FString& _str_2);
         friend bool operator!= (const FString& _str, char _ch);
 
+        void pop_back();
+
         int compare(FString& _str);
         int compare(const char* _ch);
         int compare(char _ch);

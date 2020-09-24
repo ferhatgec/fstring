@@ -339,3 +339,17 @@ int FString::compare(char _ch) {
 
         return -1;
 }
+
+void FString::pop_back() {
+        char* _str = new char[length - 1];
+
+        for(unsigned f = 0; f < length; ++f) {
+                if(f == length - 1)
+                        break;
+                else 
+                        _str[f] = data[f];        
+        }
+
+        length = length - 1;
+        data = _str;
+}
