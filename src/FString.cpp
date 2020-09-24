@@ -136,6 +136,16 @@ FString& FString::append(const FString& _str_1, const FString& _str_2) {
         return *this;
 }
 
+FString& FString::append(const FString& _str_1, const char* _ch) {
+        this->append(_str_1);
+        this->append(_ch);
+
+        length = this->len();
+        data   = this->data;
+
+        return *this;
+}
+
 FString& FString::equal(const FString& _str) {
         unsigned len = _str.len();
         char* str    = new char[len];

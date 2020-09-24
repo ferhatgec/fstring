@@ -43,6 +43,10 @@ public:
         FString& append(const FString& _str_1,
                 const FString& _str_2);
 
+
+        FString& append(const FString& _str_1,
+                const char* _ch);
+
         FString& equal(const FString& _str);
         FString& equal(const char* _ch);
         FString& equal(char _ch);
