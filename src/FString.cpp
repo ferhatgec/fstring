@@ -87,6 +87,26 @@ FString& FString::append(const FString& _str) {
         return *this;    
 }
 
+FString& FString::append(const char* _ch) {
+        unsigned f = 0;
+        do { f++; } while(_ch[f] != '\0');
+
+        unsigned len = length + f;
+        char* str    = new char[len];
+
+        for (unsigned f = 0; f < length; f++)
+                str[f] = data[f];
+
+        for (unsigned i = 0; i < f; i++)
+                str[length+i] = _ch[i];
+
+        delete data;
+        
+        length = len;
+        data   = str;
+        return *this;    
+}
+
 FString& FString::append(const FString& _str_1, const FString& _str_2) {
         this->append(_str_1);
         this->append(_str_2);
