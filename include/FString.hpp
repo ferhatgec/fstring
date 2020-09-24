@@ -56,6 +56,7 @@ public:
         friend bool operator!= (const FString& _str, char _ch);
 
         int compare(FString& _str);
+        int compare(const char* _ch);
 
         int conv_int();
 }; 

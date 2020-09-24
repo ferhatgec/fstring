@@ -156,7 +156,7 @@ FString& FString::equal(char _ch) {
         
         length = 1;
         data[0] = _ch; 
-        
+
         return *this;
 
 }
@@ -235,7 +235,34 @@ int FString::compare(FString& _str) {
 
   	        return (*unsigned_str_1 > *unsigned_str_2) - (*unsigned_str_1 < *unsigned_str_2);
         } else if(length == 1) {
-                if(_str[0] == data[0 && _str.len() == 1])
+                if(_str[0] == data[0] && _str.len() == 1)
+                        return 0;
+                else
+                        return -1;
+        }
+
+        return -1;
+}
+
+int FString::compare(const char* _ch) {
+        unsigned f = 0;
+
+        do { f++; } while(_ch[f] != '\0');
+
+        if(length > 1) {
+                const unsigned char *unsigned_str_1 = (const unsigned char *) data;
+	        const unsigned char *unsigned_str_2 = (const unsigned char *) _ch;
+
+	        while (*unsigned_str_1 == *unsigned_str_2 && 
+		        *unsigned_str_1 != '\0') {
+    		
+		        unsigned_str_1++;
+    	        	unsigned_str_2++;
+          	}
+
+  	        return (*unsigned_str_1 > *unsigned_str_2) - (*unsigned_str_1 < *unsigned_str_2);
+        } else if(length == 1) {
+                if(_ch[0] == data[0] && f == 1)
                         return 0;
                 else
                         return -1;
