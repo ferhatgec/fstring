@@ -270,3 +270,13 @@ int FString::compare(const char* _ch) {
 
         return -1;
 }
+
+int FString::compare(char _ch) {
+        if(length == 0)
+                return -1;
+        
+        if(length == 1 && data[0] == _ch)
+                return 0;
+
+        return -1;
+}
