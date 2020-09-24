@@ -1,4 +1,4 @@
-# FString
+# Fegeya FString
 ## New generation STL String implementation with powerful features.
 
 ```cpp
@@ -15,4 +15,4 @@ Print(_str);
   * Fast.
 
 
-### FString licensed under the terms of MIT License.
+### Fegeya FString licensed under the terms of MIT License.
