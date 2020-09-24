@@ -58,7 +58,9 @@ public:
         int compare(FString& _str);
         int compare(const char* _ch);
         int compare(char _ch);
-        
+
+        int ch_conv_int(char _ch);
+
         int conv_int();
 }; 
 
