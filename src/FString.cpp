@@ -222,13 +222,10 @@ int FString::ch_conv_int(char _ch) {
 int FString::conv_int() {
         int _res = 0;
 
-        if(length > 1) {
-                for(int f = 0; data[f] != '\0'; ++f) {
+        if(length > 1)
+                for(int f = 0; data[f] != '\0'; ++f)
                         _res = _res * 10 + data[f] - '0';
-                }
-
-                return _res;
-        } else
+        else
                 return ch_conv_int(data[0]);
         
         return _res;
