@@ -151,6 +151,16 @@ FString& FString::equal(const char* _ch) {
         return *this;    
 }
 
+FString& FString::equal(char _ch) {
+        delete data;
+        
+        length = 1;
+        data[0] = _ch; 
+        
+        return *this;
+
+}
+
 bool operator== (const FString& _str_1, const FString& _str_2) {
         unsigned _len_1 = _str_1.len();
         unsigned _len_2 = _str_2.len();
