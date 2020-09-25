@@ -369,10 +369,10 @@ int FString::find(const FString& _str) {
             int j = 0;
             
             for (; j < len; j++)
-    if (data[i+j] != _str[j]) break;
+                if (data[i + j] != _str[j]) break;
                  
             if (j == len)
-    return i;
+                return i;
         }            
     }        
 
