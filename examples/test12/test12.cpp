@@ -11,11 +11,11 @@
 #include "../../include/Extend.hpp"
 
 int main(void) {
-        FString a(nullptr);
+    FString a(nullptr);
 
-        /* if(a.empty()) */
-        if(a.empty() == true)
-                std::cout << "A is empty.\n";
+    /* if(a.empty()) */
+    if(a.empty() == true)
+        std::cout << "A is empty.\n";
 
-        return 0;
+    return 0;
 }

@@ -12,7 +12,7 @@
 #include "FString.hpp"
 
 namespace FExtend {
-        int Print(const FString& _str, ...);
+    int Print(const FString& _str, ...);
 }
 
 

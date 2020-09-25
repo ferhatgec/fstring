@@ -11,18 +11,18 @@
 #include "../../include/Extend.hpp"
 
 int main(void) {
-        FString a("Hello, world!\n");
-        FString b("This is FString\n");
+    FString a("Hello, world!\n");
+    FString b("This is FString\n");
 
-        std::cout << "A: ";
-        FExtend::Print(a);
+    std::cout << "A: ";
+    FExtend::Print(a);
 
-        a.equal('@');
+    a.equal('@');
 
-        std::cout << "A (New): ";
-        FExtend::Print(a);
+    std::cout << "A (New): ";
+    FExtend::Print(a);
         
-        FExtend::Print("\n");
+    FExtend::Print("\n");
         
-        return 0;
+    return 0;
 }

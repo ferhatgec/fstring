@@ -11,15 +11,15 @@
 #include "../../include/Extend.hpp"
 
 int main(void) {
-        FString a("Hello, world!\n");
-        FString b("2005");
+    FString a("Hello, world!\n");
+    FString b("2005");
 
-        std::cout << "A: ";
-        FExtend::Print(a);
+    std::cout << "A: ";
+    FExtend::Print(a);
 
-        int _b = b.conv_int();
+    int _b = b.conv_int();
 
-        std::cout << "B (Integer) : " << _b << "\n";
+    std::cout << "B (Integer) : " << _b << "\n";
 
-        return 0;
+    return 0;
 }

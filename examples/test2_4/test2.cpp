@@ -9,18 +9,18 @@
 #include "../../include/FString.hpp"
 
 int main(void) {
-        FString a('e');
+    FString a('e');
 
-        std::cout << "A: " << a << "\n";
+    std::cout << "A: " << a << "\n";
 
-        /* a = atheist */
-        a.append('t');
-        a.append('c');
-        a.append('.');
-        a.append('.');
-        a.append('.');
+    /* a = etc../ */
+    a.append('t');
+    a.append('c');
+    a.append('.');
+    a.append('.');
+    a.append('.');
         
-        std::cout << "New A: " << a << "\n";
+    std::cout << "New A: " << a << "\n";
 
-        return 0;
+    return 0;
 }

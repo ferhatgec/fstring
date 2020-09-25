@@ -12,19 +12,19 @@
 #include "../include/FString.hpp"
 
 int FExtend::Print(const FString& _str, ...) {
-        /* Create new char* with _str.len */
-        char* data = new char[_str.len()];
-        va_list arg;
+    /* Create new char* with _str.len */
+    char* data = new char[_str.len()];
+    va_list arg;
   	int done;
 
-        /* Copy data */  
-        for(unsigned f = 0; f < _str.len(); f++)
-                data[f] = _str[f];
+    /* Copy data */  
+    for(unsigned f = 0; f < _str.len(); f++)
+        data[f] = _str[f];
 
   	va_start (arg, NULL);
-        done = vfprintf (stdout, data, arg);
+    done = vfprintf (stdout, data, arg);
   	
-        va_end (arg);
+    va_end (arg);
 
-        return done;
+    return done;
 }

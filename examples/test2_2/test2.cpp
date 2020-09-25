@@ -9,18 +9,18 @@
 #include "../../include/FString.hpp"
 
 int main(void) {
-        FString a('o');
-        FString b('k');
-        FString c('!');
+    FString a('o');
+    FString b('k');
+    FString c('!');
 
-        std::cout << "A: " << a << "\n" <<
+    std::cout << "A: " << a << "\n" <<
         "B: " << b << "\n" <<
         "C: " << c << "\n";
 
-        /* a = ab */
-        a.append(b, c);
+    /* a = ab */
+    a.append(b, c);
         
-        std::cout << "New A: " << a << "\n";
+    std::cout << "New A: " << a << "\n";
 
-        return 0;
+    return 0;
 }

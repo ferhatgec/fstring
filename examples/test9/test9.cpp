@@ -11,9 +11,9 @@
 #include "../../include/Extend.hpp"
 
 int main(void) {
-        FString a("Hello, world!\n");
+    FString a("Hello, world!\n");
 
-        FExtend::Print(a);
+    FExtend::Print(a);
 
-        return 0;
+    return 0;
 }

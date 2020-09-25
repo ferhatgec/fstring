@@ -9,15 +9,16 @@
 #include "../../include/FString.hpp"
 
 int main(void) {
-        FString a('a');
-        FString _a('a');
-        std::cout << "A: " << a << "\n" <<
+    FString a('a');
+    FString _a('a');
+    
+    std::cout << "A: " << a << "\n" <<
         "B: " << _a << "\n";
 
-        if(a.compare(_a) == 0)
-                std::cout << "Woaw!\n";
-        else
-                std::cout << "hh..\n";
+    if(a.compare(_a) == 0)
+        std::cout << "Woaw!\n";
+    else
+        std::cout << "hh..\n";
 
-        return 0;
+    return 0;
 }

@@ -11,16 +11,16 @@
 #include "../../include/Extend.hpp"
 
 int main(void) {
-        FString a("Hello, world!\n");
-        FString b("This is FString\n");
+    FString a("Hello, world!\n");
+    FString b("This is FString\n");
 
-        std::cout << "A: ";
-        FExtend::Print(a);
+    std::cout << "A: ";
+    FExtend::Print(a);
 
-        a.equal(b);
+    a.equal(b);
 
-        std::cout << "A (New): ";
-        FExtend::Print(b);
+    std::cout << "A (New): ";
+    FExtend::Print(b);
         
-        return 0;
+    return 0;
 }

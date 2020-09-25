@@ -9,19 +9,19 @@
 #include "../../include/FString.hpp"
 
 int main(void) {
-        FString a('a');
-        char b = 'b';
+    FString a('a');
+    char b = 'b';
         
-        std::cout << "A: " << a << "\n" <<
+    std::cout << "A: " << a << "\n" <<
         "B: " << b << "\n";
 
-        /* bool test = ((a == b) == true); */
-        /* if(test == true) .... */
-        if((a != b) == true)
-                std::cout << "Woaw.!?\n"; 
-        else
-                std::cout << "wuh.?\n";
+    /* bool test = ((a == b) == true); */
+    /* if(test == true) .... */
+    if((a != b) == true)
+        std::cout << "Woaw.!?\n"; 
+    else
+        std::cout << "wuh.?\n";
 
 
-        return 0;
+    return 0;
 }

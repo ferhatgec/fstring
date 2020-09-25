@@ -11,15 +11,15 @@
 #include "../../include/Extend.hpp"
 
 int main(void) {
-        FString a("Hello, world!\n");
+    FString a("Hello, world!\n");
         
-        std::cout << "A: ";
-        FExtend::Print(a);
+    std::cout << "A: ";
+    FExtend::Print(a);
 
-        a.equal("const char...\n");
+    a.equal("const char...\n");
 
-        std::cout << "A (New): ";
-        FExtend::Print(a);
+    std::cout << "A (New): ";
+    FExtend::Print(a);
         
-        return 0;
+    return 0;
 }

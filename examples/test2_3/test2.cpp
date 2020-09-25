@@ -9,14 +9,14 @@
 #include "../../include/FString.hpp"
 
 int main(void) {
-        FString a('a');
+    FString a('a');
 
-        std::cout << "A: " << a << "\n";
+    std::cout << "A: " << a << "\n";
 
-        /* a = atheist */
-        a.append("theist");
+    /* a = atheist */
+    a.append("theist");
         
-        std::cout << "New A: " << a << "\n";
+    std::cout << "New A: " << a << "\n";
 
-        return 0;
+    return 0;
 }

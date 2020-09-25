@@ -9,14 +9,14 @@
 #include "../../include/FString.hpp"
 
 int main(void) {
-        FString a("Hey!");
-        FString b(" Huh..");
+    FString a("Hey!");
+    FString b(" Huh..");
 
-        std::cout << "A: " << a << "\n";
+    std::cout << "A: " << a << "\n";
         
-        a.append(b, " Today looks like milky filter coffee...");
+    a.append(b, " Today looks like milky filter coffee...");
 
-        std::cout << "New A: " << a << "\n";
+    std::cout << "New A: " << a << "\n";
 
-        return 0;
+    return 0;
 }

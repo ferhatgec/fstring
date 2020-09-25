@@ -11,11 +11,11 @@
 #include "../../include/Extend.hpp"
 
 int main(void) {
-        FString a("Hello, world!");
+    FString a("Hello, world!");
 
-        /* if(a.empty() == false) */
-        if(!a.empty())
-                std::cout << "A is full.\n";
+    /* if(a.empty() == false) */
+    if(!a.empty())
+        std::cout << "A is full.\n";
 
-        return 0;
+    return 0;
 }

@@ -9,14 +9,15 @@
 #include "../../include/FString.hpp"
 
 int main(void) {
-        FString a('a');
-        FString b('1');
-        std::cout << "A: " << a << "\n" <<
+    FString a('a');
+    FString b('1');
+    
+    std::cout << "A: " << a << "\n" <<
         "B: " << b << "\n";
 
-        int number = b.conv_int();
+    int number = b.conv_int();
 
-        std::cout << "B (Int) : " << number << "\n";
+    std::cout << "B (Int) : " << number << "\n";
         
-        return 0;
+    return 0;
 }

@@ -9,9 +9,9 @@
 #include "../../include/FString.hpp"
 
 int main(void) {
-        FString a("Hello, world!");
+    FString a("Hello, world!");
 
-        std::cout << "A: " << a << "\n";
+    std::cout << "A: " << a << "\n";
 
-        return 0;
+    return 0;
 }
