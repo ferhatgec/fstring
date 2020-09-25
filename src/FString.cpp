@@ -357,3 +357,24 @@ bool FString::empty() {
         
     return false;
 }
+
+int FString::find(const FString& _str) { 
+    int len = _str.len();
+        
+    if (!len)
+        return 0;
+        
+    for (int i = 0; i < length; i ++) {
+        if (data[i] == _str[0]) {
+            int j = 0;
+            
+            for (; j < len; j++)
+    if (data[i+j] != _str[j]) break;
+                 
+            if (j == len)
+    return i;
+        }            
+    }        
+
+    return -1;
+}

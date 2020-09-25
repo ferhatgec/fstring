@@ -72,6 +72,8 @@ public:
     int conv_int();
 
     bool empty();
+
+    int find(const FString& _str);
 }; 
 
 
