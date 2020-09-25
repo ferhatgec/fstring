@@ -70,6 +70,8 @@ public:
         int ch_conv_int(char _ch);
 
         int conv_int();
+
+        bool empty();
 }; 
 
 

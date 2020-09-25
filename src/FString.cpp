@@ -353,3 +353,10 @@ void FString::pop_back() {
         length = length - 1;
         data = _str;
 }
+
+bool FString::empty() {
+        if(length == 0)
+                return true;
+        
+        return false;
+}
