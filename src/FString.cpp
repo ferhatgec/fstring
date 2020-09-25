@@ -378,3 +378,25 @@ int FString::find(const FString& _str) {
 
     return -1;
 }
+
+int FString::find(const char* _ch) {
+    unsigned len = 0;
+    do { len++; } while(_ch[len] != '\0');
+    
+    if (!len)
+        return 0;
+        
+    for (int i = 0; i < length; i ++) {
+        if (data[i] == _ch[0]) {
+            int j = 0;
+            
+            for (; j < len; j++)
+                if (data[i + j] != _ch[j]) break;
+                 
+            if (j == len)
+                return i;
+        }            
+    }        
+
+    return -1;
+}

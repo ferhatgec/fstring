@@ -74,6 +74,7 @@ public:
     bool empty();
 
     int find(const FString& _str);
+    int find(const char* _ch);
 }; 
 
 
