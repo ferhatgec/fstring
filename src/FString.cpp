@@ -58,16 +58,6 @@ std::ostream& operator<< (std::ostream& ostr, const FString& _str) {
     return ostr;
 }
 
-/* e.g cin (istream) */
-std::istream& operator>> (std::istream& is, FString& str) {
-    char* c = new char[1000];
-    
-    is >> c;
-    str = FString(c);
-    
-    return is;
-}
-
 char FString::operator[] (unsigned _ch) const {
     if(_ch >= length) 
         throw 1;

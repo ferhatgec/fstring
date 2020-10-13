@@ -33,9 +33,6 @@ public:
     friend std::ostream& operator<< (std::ostream& ostr, 
         const FString& _str);
         
-    friend std::istream& operator<< (std::istream& istr, 
-    	FString& str);    
-        
     char operator[] (unsigned _ch) const;
     char& operator[] (unsigned _ch);
 
